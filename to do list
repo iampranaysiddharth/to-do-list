@@ -1,0 +1,19 @@
+tasks = []
+
+def add_task(task):
+    tasks.append(task)
+    print(f"Added: {task}")
+
+def show_tasks():
+    for i, task in enumerate(tasks, 1):
+        print(f"{i}. {task}")
+
+while True:
+    cmd = input("Enter command (add/show/exit): ").strip().lower()
+    if cmd == "add":
+        task = input("Enter task: ")
+        add_task(task)
+    elif cmd == "show":
+        show_tasks()
+    elif cmd == "exit":
+        break
